@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SWWorkManagementHeaderCollectionReusableView" id="U6b-Vx-4bR" customClass="SWWorkManagementHeaderCollectionReusableView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Occ-aL-MIE">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="So5-V6-Nkx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已上傳 -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HM-Cz-t73">
+                    <rect key="frame" x="10" y="15" width="64" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Occ-aL-MIE" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="3vY-bN-2zg"/>
+                <constraint firstItem="1HM-Cz-t73" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="4e6-Sd-duk"/>
+                <constraint firstAttribute="trailing" secondItem="Occ-aL-MIE" secondAttribute="trailing" id="MNo-r6-MJ6"/>
+                <constraint firstAttribute="bottom" secondItem="Occ-aL-MIE" secondAttribute="bottom" id="iVg-1X-0xp"/>
+                <constraint firstItem="1HM-Cz-t73" firstAttribute="leading" secondItem="9Gg-ye-v9C" secondAttribute="leading" constant="10" id="peH-7F-yDE"/>
+                <constraint firstItem="Occ-aL-MIE" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="xP0-k0-7AO"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="9Gg-ye-v9C"/>
+            <connections>
+                <outlet property="effectView" destination="Occ-aL-MIE" id="HUL-n1-MrZ"/>
+                <outlet property="title" destination="1HM-Cz-t73" id="fSv-rE-oGt"/>
+            </connections>
+        </collectionReusableView>
+    </objects>
+</document>

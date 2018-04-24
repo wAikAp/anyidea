@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SWPortfolioCollectionViewCell" id="gTV-IL-0wX" customClass="SWPortfolioCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="239"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="180" height="239"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" image="jobTestImage" translatesAutoresizingMaskIntoConstraints="NO" id="Y9d-LL-pPt">
+                        <rect key="frame" x="15" y="10" width="160" height="160"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="160" id="K9B-re-QCB"/>
+                            <constraint firstAttribute="height" constant="160" id="zcY-0t-o0Q"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="01/02/2018中標" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsa-Sw-q1E">
+                        <rect key="frame" x="15" y="212.5" width="160" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="洗衣LOGO設計   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcz-jj-5gQ" userLabel="title">
+                        <rect key="frame" x="15" y="180" width="160" height="23"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Y9d-LL-pPt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="7ZO-xm-0e6"/>
+                <constraint firstItem="wcz-jj-5gQ" firstAttribute="trailing" secondItem="Y9d-LL-pPt" secondAttribute="trailing" id="CHZ-4y-GcZ"/>
+                <constraint firstItem="wcz-jj-5gQ" firstAttribute="leading" secondItem="Y9d-LL-pPt" secondAttribute="leading" id="I0B-x0-rRd"/>
+                <constraint firstItem="Y9d-LL-pPt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="P3R-OV-PCr"/>
+                <constraint firstAttribute="bottom" secondItem="hsa-Sw-q1E" secondAttribute="bottom" constant="11.5" id="TdU-CN-GKT"/>
+                <constraint firstItem="hsa-Sw-q1E" firstAttribute="leading" secondItem="wcz-jj-5gQ" secondAttribute="leading" id="aKt-3k-Zyr"/>
+                <constraint firstItem="hsa-Sw-q1E" firstAttribute="trailing" secondItem="wcz-jj-5gQ" secondAttribute="trailing" id="g1Q-fP-1P8"/>
+                <constraint firstItem="wcz-jj-5gQ" firstAttribute="top" secondItem="Y9d-LL-pPt" secondAttribute="bottom" constant="10" id="oUg-dP-IZa"/>
+                <constraint firstItem="hsa-Sw-q1E" firstAttribute="top" secondItem="wcz-jj-5gQ" secondAttribute="bottom" constant="10" id="uIp-X7-BAL"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <size key="customSize" width="210" height="270"/>
+            <point key="canvasLocation" x="105" y="101.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="jobTestImage" width="842" height="596"/>
+    </resources>
+</document>
