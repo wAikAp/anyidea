@@ -16,6 +16,8 @@
 @end
 
 @interface SWPostMissionStepThreeTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *tipsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *tips2Label;
 
 @property (nonatomic, weak) id<SWPostMissionStepThreeTableViewCellDelegate> delegate;
 

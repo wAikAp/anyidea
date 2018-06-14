@@ -23,6 +23,7 @@
 #import "SWScreenHelper.h"
 #import "SWNewsTableViewCell.h"
 #import "SWNewMissionsTableViewCell.h"
+#import "SWBannerModel.h"
 
 #import "SDCycleScrollView.h"
 #import "Masonry.h"
@@ -55,11 +56,31 @@ static NSString * const mainTableViewPortfolioCellID = @"MainTableViewPortfolioC
     [self setUpTableViewCell];
 
     
+    
+    
     self.navigationItem.title = @"anyidea";
     self.imageStrArr = @[@"onlinestore-banner_v1-1",@"attachmentiphone",@"BillionsAndBillions",@"Cantina"];
     self.tableView.scrollsToTop = YES;
 
+    [self testJson];
     
+}
+
+
+-(void)testJson{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"homeTestJson" ofType:@"json"];
+    
+    NSData *jsonData = [NSData dataWithContentsOfFile:path options:NSDataReadingMappedIfSafe error:nil];
+    NSMutableDictionary *result = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
+//    NSLog(@"dic - %@",  result);
+    NSArray *bannerData = [result valueForKey:@"banner"];
+//    NSLog(@"banner = %@",bannerData);
+     for (NSDictionary *dic in bannerData) {
+//        NSLog(@"%@",dic);
+        //字典轉模型
+        SWBannerModel *bannerModel  = [SWBannerModel bannerModelWithDic:dic];
+        NSLog(@"banner = %@",bannerModel.url);
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -85,7 +106,8 @@ static NSString * const mainTableViewPortfolioCellID = @"MainTableViewPortfolioC
     [self.tableView registerNib:[UINib nibWithNibName:newsTableViewCellID bundle:nil] forCellReuseIdentifier:newsTableViewCellID];
     [self.tableView registerNib:[UINib nibWithNibName:mainTableViewPortfolioCellID bundle:nil] forCellReuseIdentifier:mainTableViewPortfolioCellID];
     [self.tableView registerNib:[UINib nibWithNibName:newMissionsTableViewCellID bundle:nil] forCellReuseIdentifier:newMissionsTableViewCellID];
-    self.tableView.estimatedRowHeight = 152;
+    self.tableView.estimatedRowHeight = 150;
+//    self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 - (void)setUpBannerView
 {
@@ -116,7 +138,7 @@ static NSString * const mainTableViewPortfolioCellID = @"MainTableViewPortfolioC
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0 || section == 1) {
-        return 3;
+        return 5;
     }else if (section == 3){
         return 1;
     }
@@ -127,9 +149,10 @@ static NSString * const mainTableViewPortfolioCellID = @"MainTableViewPortfolioC
 {
 
     if (indexPath.section == 0){//最新任務列表
+        
         SWNewMissionsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:newMissionsTableViewCellID];
         cell.numberTitle.text = [NSString stringWithFormat:@"%ld.",indexPath.row + 1];
-        cell.missionTitle.text = @"$100 公司logo創作";
+//        cell.missionTitle.text = @"$100 公司logo創作";
         cell.statusImageView.image = [UIImage imageNamed:@"greenPoint"];
         return cell;
     }
@@ -160,9 +183,13 @@ static NSString * const mainTableViewPortfolioCellID = @"MainTableViewPortfolioC
 #pragma mark - tableView
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"height = %f",[super tableView:tableView heightForRowAtIndexPath:indexPath]);
     if (indexPath.section == 3){//PortfolioCell(作品集)
         return [SWScreenHelper fixCollectionItemSize].height+2;
     }
+//    else if (indexPath.section == 0){
+//        return 50.f;
+//    }
     return  [super tableView:tableView heightForRowAtIndexPath:indexPath];
 }
 

@@ -23,9 +23,10 @@
     self.textView.text = self.text;
     self.textView.delegate = self;
     self.pleaseHolderLabel.text = @"在此輸入你的資料";
-    if ([self.textView.text isEqualToString:@""]) {
+    if ([self.textView.text isEqualToString:@""]||[self.textView.text isEqualToString:@"新增簡介"]) {
         
         self.pleaseHolderLabel.hidden = NO;
+        self.textView.text = @"";
     }else{
         
         self.pleaseHolderLabel.hidden = YES;

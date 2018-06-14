@@ -12,54 +12,51 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainTableViewCell" rowHeight="186" id="KGk-i7-Jjw" customClass="MainTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="359" height="181"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainTableViewCell" rowHeight="183" id="KGk-i7-Jjw" customClass="MainTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="337" height="190"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MianTableViewCell" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="359" height="180.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="337" height="189.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="pic8" translatesAutoresizingMaskIntoConstraints="NO" id="9pU-nm-3cr">
-                        <rect key="frame" x="10" y="10" width="160" height="160"/>
+                        <rect key="frame" x="10" y="15" width="160" height="160"/>
                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="160" id="bYk-6r-zpA"/>
-                            <constraint firstAttribute="height" constant="160" id="kfV-7B-pO1"/>
+                            <constraint firstAttribute="width" constant="160" id="46Z-cB-3yY"/>
+                            <constraint firstAttribute="height" constant="160" id="CPr-xa-Mbl"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="700" verticalHuggingPriority="700" horizontalCompressionResistancePriority="700" verticalCompressionResistancePriority="700" text="澳洲地產代理公司Logo及卡片設計" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cp2-Ly-mCU">
-                        <rect key="frame" x="180" y="10" width="169" height="64.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="700" verticalHuggingPriority="700" horizontalCompressionResistancePriority="700" verticalCompressionResistancePriority="700" text="澳洲地產代理公司Logo及卡片設計" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cp2-Ly-mCU">
+                        <rect key="frame" x="180" y="15" width="147" height="41"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="$ 350" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLe-al-tzf">
-                        <rect key="frame" x="180" y="139.5" width="169" height="31"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="$ 350" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLe-al-tzf">
+                        <rect key="frame" x="180" y="115.5" width="147" height="31"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="700" verticalCompressionResistancePriority="700" text="Type | Designer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNT-p4-GoA">
-                        <rect key="frame" x="180" y="94.5" width="169" height="25"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="25" id="BYY-xR-PYZ"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="700" verticalCompressionResistancePriority="700" text="Type | Designer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNT-p4-GoA">
+                        <rect key="frame" x="180" y="76" width="147" height="19.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="9pU-nm-3cr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="0vb-4y-5OQ"/>
                     <constraint firstItem="JNT-p4-GoA" firstAttribute="leading" secondItem="Cp2-Ly-mCU" secondAttribute="leading" id="1Hk-hJ-OSH"/>
                     <constraint firstItem="JNT-p4-GoA" firstAttribute="top" secondItem="Cp2-Ly-mCU" secondAttribute="bottom" constant="20" id="1l9-Bb-bpR"/>
-                    <constraint firstItem="Cp2-Ly-mCU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="4m1-da-th1"/>
+                    <constraint firstItem="Cp2-Ly-mCU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="4m1-da-th1"/>
                     <constraint firstItem="NLe-al-tzf" firstAttribute="leading" secondItem="JNT-p4-GoA" secondAttribute="leading" id="8J3-h0-bVz"/>
+                    <constraint firstItem="9pU-nm-3cr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="DSs-ke-S25"/>
                     <constraint firstItem="NLe-al-tzf" firstAttribute="trailing" secondItem="JNT-p4-GoA" secondAttribute="trailing" id="G6Y-1T-XiU"/>
-                    <constraint firstItem="9pU-nm-3cr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="HOP-A1-C5S"/>
                     <constraint firstItem="NLe-al-tzf" firstAttribute="top" secondItem="JNT-p4-GoA" secondAttribute="bottom" constant="20" id="K7F-wv-jf5"/>
-                    <constraint firstAttribute="bottom" secondItem="NLe-al-tzf" secondAttribute="bottom" constant="10" id="NNi-uD-Y9S"/>
-                    <constraint firstItem="Cp2-Ly-mCU" firstAttribute="leading" secondItem="9pU-nm-3cr" secondAttribute="trailing" constant="10" id="ObK-o3-t0u"/>
-                    <constraint firstItem="9pU-nm-3cr" firstAttribute="top" secondItem="Cp2-Ly-mCU" secondAttribute="top" id="mt6-wZ-NsF"/>
+                    <constraint firstItem="Cp2-Ly-mCU" firstAttribute="leading" secondItem="9pU-nm-3cr" secondAttribute="trailing" constant="10" id="bQN-cQ-wyg"/>
+                    <constraint firstAttribute="bottom" secondItem="NLe-al-tzf" secondAttribute="bottom" constant="43" id="s7m-iQ-EVv"/>
                     <constraint firstItem="JNT-p4-GoA" firstAttribute="trailing" secondItem="Cp2-Ly-mCU" secondAttribute="trailing" id="sdw-45-ZZY"/>
                     <constraint firstAttribute="trailing" secondItem="Cp2-Ly-mCU" secondAttribute="trailing" constant="10" id="yMr-3k-b20"/>
                 </constraints>
@@ -71,7 +68,7 @@
                 <outlet property="typeLabel" destination="JNT-p4-GoA" id="T2x-zy-kfN"/>
                 <outlet property="workTitle" destination="Cp2-Ly-mCU" id="bFd-sA-qSv"/>
             </connections>
-            <point key="canvasLocation" x="-230.5" y="-428.5"/>
+            <point key="canvasLocation" x="-263.5" y="-346"/>
         </tableViewCell>
     </objects>
     <resources>

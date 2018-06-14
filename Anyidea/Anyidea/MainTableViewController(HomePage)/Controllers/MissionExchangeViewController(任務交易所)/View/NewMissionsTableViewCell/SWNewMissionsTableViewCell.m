@@ -7,12 +7,13 @@
 //
 
 #import "SWNewMissionsTableViewCell.h"
+#import "UIView+Extension.h"
 
 @implementation SWNewMissionsTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

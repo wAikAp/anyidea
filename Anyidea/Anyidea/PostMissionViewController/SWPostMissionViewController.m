@@ -101,8 +101,8 @@ static NSString * postMissionStep4CellID = @"SWPostMissionStepFourTableViewCell"
     self.tableviewStep2.tableHeaderView = header2;
     self.tableViewStep3.tableHeaderView = header3;
     self.tableViewStep4.tableHeaderView = header4;
-    header1.frame = CGRectMake(0, 0, header1.frame.size.width, header1.frame.size.height);
-    header2.frame = header3.frame = header4.frame = header1.frame;
+//    header1.frame = CGRectMake(0, 0, header1.frame.size.width, header1.frame.size.height);
+//    header2.frame = header3.frame = header4.frame = header1.frame;
     IQKeyboardReturnKeyHandler *returnKeyHandler = [[IQKeyboardReturnKeyHandler alloc]initWithViewController:self];
     returnKeyHandler.lastTextFieldReturnKeyType = UIReturnKeyDone;
     self.returnKeyHandler = returnKeyHandler;

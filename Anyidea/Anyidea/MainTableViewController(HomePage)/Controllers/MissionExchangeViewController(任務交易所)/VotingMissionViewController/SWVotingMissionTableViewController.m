@@ -56,7 +56,7 @@ static NSString * const VotingMissionCellID = @"SWVotingMissionTableViewCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell;
     if (indexPath.section == 0) {
-        cell = [tableView dequeueReusableCellWithIdentifier:VotingMissionCellID forIndexPath:indexPath];
+        cell = [tableView dequeueReusableCellWithIdentifier:hotMissionCellID forIndexPath:indexPath];
     }
     
     if (indexPath.section == 1) {
@@ -79,15 +79,15 @@ static NSString * const VotingMissionCellID = @"SWVotingMissionTableViewCell";
     return headerView;
 }
 //
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.section==1) {
-        
-      return [SWScreenHelper fixTableViewHeight];
-    }
-    return [super tableView:tableView heightForRowAtIndexPath:indexPath];
-}
-
+//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if (indexPath.section==1) {
+//
+//      return [SWScreenHelper fixTableViewHeight];
+//    }
+//    return [super tableView:tableView heightForRowAtIndexPath:indexPath];
+//}
+//
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 50;

@@ -49,7 +49,7 @@ static NSString * const nowPostWorksCollectionViewCellID = @"SWNowPostWorksColle
     self.title = @"任務詳情";
     if (@available(iOS 11.0, *)) {
         self.navigationController.navigationBar.prefersLargeTitles = YES;
-        self.navigationItem.largeTitleDisplayMode = UINavigationItemLargeTitleDisplayModeAutomatic;
+        self.navigationItem.largeTitleDisplayMode = UINavigationItemLargeTitleDisplayModeAlways;
     } else {
         // Fallback on earlier versions
     }
@@ -113,6 +113,10 @@ static NSString * const nowPostWorksCollectionViewCellID = @"SWNowPostWorksColle
     joinBtn.backgroundColor = [UIColor colorWithRed:(237)/255.0 green:(15)/255.0 blue:(24)/255.0 alpha:1.0];
     joinBtn.layer.cornerRadius = joinBtnWH/2;
     [joinBtn.layer masksToBounds];
+    
+    joinBtn.layer.borderColor = [UIColor whiteColor].CGColor;
+    joinBtn.layer.borderWidth = 2.0f;
+    
     self.joinBtn = joinBtn;
     [self.navigationController.navigationBar addSubview:joinBtn];
     

@@ -7,7 +7,6 @@
 //
 
 
-#define BigCellHeight 220
 
 #import "SWHotMissionTableViewController.h"
 #import "SWHotMissionViewCell.h"
@@ -28,7 +27,9 @@ static NSString * const hotMissionCellID = @"SWHotMissionViewCell";
 
 -(void)setUpUi{
     [self.tableView registerNib:[UINib nibWithNibName:hotMissionCellID bundle:nil] forCellReuseIdentifier:hotMissionCellID];
-    self.tableView.estimatedRowHeight = BigCellHeight;
+//    self.tableView.estimatedRowHeight = 150;//估算高度
+//    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
 }
 
 -(void)selectCellWithIndexPath:(NSIndexPath *)indexPath
@@ -50,15 +51,19 @@ static NSString * const hotMissionCellID = @"SWHotMissionViewCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:hotMissionCellID forIndexPath:indexPath];
+    SWHotMissionViewCell *cell = [tableView dequeueReusableCellWithIdentifier:hotMissionCellID forIndexPath:indexPath];
     cell.selectionStyle =UITableViewCellSelectionStyleNone;
+    if (indexPath.row == 2) {
+        cell.titleLabel.text = @"打開我怕打就是打開手機破解啊東平街SAP大家撒潑登記證程序集劇情外婆";
+        cell.bodyLabel.text = @"我安靜哦收盤價持續開展垃圾哦親我家卡了傑克丹尼建甌盤撒嬌的技術科技成長型超級愛哦的卡啊貸款利息快走車庫口腔外科歐佩克從盤口奧斯卡都咳嗽的咳嗽的咳嗽到付金額為我謳歌紅hi都紅紅的批 jdijoqwjdjsakdjsaiodjasopjdkasjdqw0diondsnc";
+    }
     return cell;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return [SWScreenHelper fixTableViewHeight];
-}
+//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return [SWScreenHelper fixTableViewHeight];
+//}
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {

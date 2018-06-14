@@ -66,8 +66,7 @@ static NSString *const userCenterCellID = @"SWUserCenterTableViewCell";
     SWUserCenterHeaderView *header = [SWUserCenterHeaderView userCenterHeaderView];
     header.delegate = self;
     self.tableView.tableHeaderView = header;
-    
-    [header.IntroductionBtn setTitle:@"這是我的自我介紹我時代of你的啥的身份就愛上了；分；low解放啦；色即是空能吃嗎，下載查看積極瓦護膚理念是佛千萬困難發卡機平方米" forState:UIControlStateNormal];
+//    header.introductionLabel.text = @"銷售渠道開始今年你的脾氣可能是老師能群毆的就是看了系列智能產品清潔科技奧斯卡的角度看但就怕聖誕節拉斯；留校察看婆婆千軍破年輕我陪你";
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     
 }
@@ -120,17 +119,12 @@ static NSString *const userCenterCellID = @"SWUserCenterTableViewCell";
 }
 
 #pragma mark - SWUserCenterHeaderViewDelegate
--(void)userCenterHeader:(SWUserCenterHeaderView *)header introcutionBtnDidClick:(UIButton *)introcutionBtn
+-(void)userCenterHeader:(SWUserCenterHeaderView *)header introcutionBtnDidClick:(UIButton *)introcutionBtn introcutionLabel:(UILabel *)introcutionLabel
 {
     if (self.currentUser) {
         SWUserEditingViewController *editVc = [[SWUserEditingViewController alloc]init];
         [self.navigationController pushViewController:editVc animated:YES];
-        
-        if ([introcutionBtn.titleLabel.text isEqualToString:@"新增簡介"]) {
-            editVc.text = @"";
-        }else{
-            editVc.text = introcutionBtn.titleLabel.text;
-        }
+        editVc.text = introcutionLabel.text;
     }
 }
 

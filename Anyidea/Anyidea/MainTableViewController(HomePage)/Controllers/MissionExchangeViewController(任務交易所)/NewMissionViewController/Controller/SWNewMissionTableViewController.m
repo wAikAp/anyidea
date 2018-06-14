@@ -34,6 +34,7 @@ static NSString *const newMissionsTableViewCellID = @"SWNewMissionsTableViewCell
     
     [self.tableView registerNib:[UINib nibWithNibName:hotMissionCellID bundle:nil] forCellReuseIdentifier:hotMissionCellID];
     [self.tableView registerNib:[UINib nibWithNibName:newMissionsTableViewCellID bundle:nil] forCellReuseIdentifier:newMissionsTableViewCellID];
+//    self.tableView.estimatedRowHeight = 50.f;
 }
 
 
@@ -65,7 +66,7 @@ static NSString *const newMissionsTableViewCellID = @"SWNewMissionsTableViewCell
     }else{
         SWNewMissionsTableViewCell *newCell = [tableView dequeueReusableCellWithIdentifier:newMissionsTableViewCellID];
         newCell.numberTitle.text = [NSString stringWithFormat:@"%ld.",indexPath.row + 1];
-        newCell.missionTitle.text = @"$100 公司logo創作";
+//        newCell.missionTitle.text = @"$100 公司logo創作";
         newCell.statusImageView.image = [UIImage imageNamed:@"greenPoint"];
         newCell.selectionStyle =UITableViewCellSelectionStyleNone;
         return newCell;
@@ -89,13 +90,8 @@ static NSString *const newMissionsTableViewCellID = @"SWNewMissionsTableViewCell
         [self.delegate missionTableViewControllerDidScroll:self andScrollView:scrollView];
     }
 }
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.row == 0) {
-        return [SWScreenHelper fixTableViewHeight];
-    }
-    return [super tableView:tableView heightForRowAtIndexPath:indexPath];;
-}
+
+
 
 /*
 // Override to support conditional editing of the table view.

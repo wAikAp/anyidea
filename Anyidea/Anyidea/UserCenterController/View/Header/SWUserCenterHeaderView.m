@@ -29,8 +29,8 @@
 }
 
 - (IBAction)introcutionBtnDidClick:(UIButton *)sender {
-    if ([self.delegate respondsToSelector:@selector(userCenterHeader:introcutionBtnDidClick:)]) {
-        [self.delegate userCenterHeader:self introcutionBtnDidClick:sender];
+    if ([self.delegate respondsToSelector:@selector(userCenterHeader:introcutionBtnDidClick:introcutionLabel:)]) {
+        [self.delegate userCenterHeader:self introcutionBtnDidClick:sender introcutionLabel:self.introductionLabel];
     }
 }
 - (IBAction)submitedJobsBtnDidClick:(UIButton *)sender {

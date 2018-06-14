@@ -17,6 +17,7 @@
 #import "SWMessageTableViewController.h"
 #import "SWUserCenterViewController.h"
 #import "SWWorkManagementViewController.h"
+#import "SWUserModel.h"
 
 #import "Masonry.h"
 #import "UIViewController+MMDrawerController.h"
@@ -28,11 +29,22 @@
 @property (nonatomic,strong)NSArray *tableArr;
 @property (weak, nonatomic) IBOutlet UIView *logoView;
 @property (nonatomic, assign) BOOL fristLoad;
+@property (nonatomic, strong) SWUserModel *userModel;
 @end
 
 @implementation SWLeftTableViewController
 
 static NSString *const leftTabelCellID = @"LeftTabelCell";
+
+#pragma mark - 懶加載
+-(SWUserModel *)userModel
+{
+    if (!_userModel) {
+        _userModel = [SWUserModel userModel];
+    }
+    return _userModel;
+}
+
 -(NSArray *)tableArr
 {
     if (_tableArr == nil) {
@@ -43,8 +55,8 @@ static NSString *const leftTabelCellID = @"LeftTabelCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     [self setUpUI];
+    [self mapData];
 }
 
 -(void)setUpUI{
@@ -75,8 +87,10 @@ static NSString *const leftTabelCellID = @"LeftTabelCell";
 
     self.tableView.backgroundView = background;
     self.tableView.backgroundColor = [UIColor clearColor];
-    
-    
+}
+
+-(void)mapData{
+    [self.userNameLabel setTitle:self.userModel.name forState:UIControlStateNormal] ;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{

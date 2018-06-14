@@ -11,21 +11,11 @@
 #import "SWScreenHelper.h"
 
 @interface SWHotMissionViewCell()
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHeightConstraints;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageWidthConstraints;
+
 
 @end
 
 @implementation SWHotMissionViewCell
 
-
--(void)layoutSubviews
-{
-    [super layoutSubviews];
-    if ([[SWScreenHelper iphoneScreenType] isEqualToString:IPHONESE_SIZE_SCREEN]) {
-        self.imageWidthConstraints.constant = 60;
-        self.imageHeightConstraints.constant = 60;
-    }
-}
 
 @end
