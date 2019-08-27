@@ -13,10 +13,10 @@
 
 +(instancetype)userModel{
     NSString *jsonString = @"{\"name\":\"Jack\", \"userID\":\"1101211a\", \"token\":\"Null\"}";
-    NSLog(@"json = %@",jsonString);
+    //NSLog(@"json = %@",jsonString);
     
     SWUserModel *user = [SWUserModel mj_objectWithKeyValues:jsonString];
-    NSLog(@"model = %@",user);
+    //NSLog(@"model = %@",user);
     return user;
     
 }

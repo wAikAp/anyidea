@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="SWPostMissionTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="SWPostMissionTableViewCell" rowHeight="96" id="KGk-i7-Jjw" customClass="SWPostMissionTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="101"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h17-gc-9i2">
+                        <rect key="frame" x="50" y="10" width="220" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="BB6-mb-zoe"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c2z-K3-tSs">
+                        <rect key="frame" x="50" y="50" width="220" height="41"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="41" id="X58-Up-ZJH"/>
+                        </constraints>
+                        <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mhf-yF-N4F">
+                        <rect key="frame" x="50" y="96" width="220" height="1"/>
+                        <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Yc6-gu-O9W"/>
+                        </constraints>
+                    </view>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="255" verticalCompressionResistancePriority="755" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HR4-Kn-VDN">
+                        <rect key="frame" x="50" y="50" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="EZI-8Q-wpk"/>
+                            <constraint firstAttribute="width" constant="40" id="VdA-UO-0We"/>
+                        </constraints>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" image="addButton"/>
+                        <connections>
+                            <action selector="attBtnDidClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="DDA-d4-vNp"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mhf-yF-N4F" firstAttribute="leading" secondItem="c2z-K3-tSs" secondAttribute="leading" id="2di-AH-pqV"/>
+                    <constraint firstItem="mhf-yF-N4F" firstAttribute="trailing" secondItem="c2z-K3-tSs" secondAttribute="trailing" id="6nx-Kn-BmA"/>
+                    <constraint firstItem="HR4-Kn-VDN" firstAttribute="leading" secondItem="h17-gc-9i2" secondAttribute="leading" id="7OY-sV-huo"/>
+                    <constraint firstItem="c2z-K3-tSs" firstAttribute="trailing" secondItem="h17-gc-9i2" secondAttribute="trailing" id="DXw-uo-N7r"/>
+                    <constraint firstItem="c2z-K3-tSs" firstAttribute="top" secondItem="h17-gc-9i2" secondAttribute="bottom" constant="10" id="NpV-fO-gMv"/>
+                    <constraint firstItem="c2z-K3-tSs" firstAttribute="leading" secondItem="h17-gc-9i2" secondAttribute="leading" id="RRS-DI-hkL"/>
+                    <constraint firstAttribute="bottom" secondItem="mhf-yF-N4F" secondAttribute="bottom" id="YSD-cZ-kGI"/>
+                    <constraint firstItem="mhf-yF-N4F" firstAttribute="top" secondItem="c2z-K3-tSs" secondAttribute="bottom" constant="5" id="bSo-dv-KdQ"/>
+                    <constraint firstItem="HR4-Kn-VDN" firstAttribute="top" secondItem="h17-gc-9i2" secondAttribute="bottom" constant="10" id="gHG-an-Azq"/>
+                    <constraint firstItem="h17-gc-9i2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="hKb-ne-7bh"/>
+                    <constraint firstItem="h17-gc-9i2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="wWh-te-l1F"/>
+                    <constraint firstAttribute="trailing" secondItem="h17-gc-9i2" secondAttribute="trailing" constant="50" id="zP5-6b-PGM"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="subviews">
+                        <exclude reference="HR4-Kn-VDN"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="attBtn" destination="HR4-Kn-VDN" id="nxh-8I-X3h"/>
+                <outlet property="lineView" destination="mhf-yF-N4F" id="Ahx-A6-Avv"/>
+                <outlet property="textField" destination="c2z-K3-tSs" id="uCc-wS-Vlh"/>
+                <outlet property="title" destination="h17-gc-9i2" id="N8L-Dl-PRv"/>
+            </connections>
+            <point key="canvasLocation" x="-132.80000000000001" y="2.2488755622188905"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="addButton" width="36" height="36"/>
+    </resources>
+</document>

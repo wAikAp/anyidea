@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface SWPortfolioCollectionViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *jobImageView;
+@property (weak, nonatomic) IBOutlet UILabel *jobTitle;
+@property (weak, nonatomic) IBOutlet UILabel *idLabel;
+@property (nonatomic, assign) BOOL is_protected;
+@property (weak, nonatomic) IBOutlet UIButton *priveateBtn;
 
 @end

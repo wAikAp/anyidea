@@ -7,7 +7,7 @@
 //
 
 #import "SWRightTableViewController.h"
-#import "SWWebViewController.h"
+
 #import "MainNavigationController.h"
 
 @interface SWRightTableViewController ()
@@ -63,9 +63,9 @@ static NSString *const rightTabelCellID = @"LeftTabelCell";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 1) {
-        SWWebViewController *web = [[SWWebViewController alloc]init];
-        MainNavigationController *nav = [[MainNavigationController alloc]initWithRootViewController:web];
-        [self showViewController:nav sender:self];
+//        SWWebViewController *web = [[SWWebViewController alloc]init];
+//        MainNavigationController *nav = [[MainNavigationController alloc]initWithRootViewController:web];
+//        [self showViewController:nav sender:self];
     }
 }
 

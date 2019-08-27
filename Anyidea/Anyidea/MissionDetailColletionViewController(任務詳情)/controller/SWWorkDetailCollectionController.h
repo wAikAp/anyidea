@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserModel.h"
 
 @interface SWWorkDetailCollectionController : UICollectionViewController
 
@@ -14,8 +15,8 @@
 
 @property (nonatomic, strong) NSString *testBackGroundInfo;
 @property (nonatomic, strong) NSString *testMissionRequs;
-
+@property (nonatomic, copy) NSString *missionID;
 @property (nonatomic, strong) NSArray *imageArr;
-
+//@property (nonatomic, strong) UserModel *postsJobUser;
 
 @end

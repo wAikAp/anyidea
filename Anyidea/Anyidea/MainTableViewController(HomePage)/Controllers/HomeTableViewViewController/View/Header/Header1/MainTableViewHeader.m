@@ -8,12 +8,14 @@
 
 #import "MainTableViewHeader.h"
 #import "SWScreenHelper.h"
+#import "UIView+Extension.h"
 
 @implementation MainTableViewHeader
 +(MainTableViewHeader *)mainTableViewHeader
 {
     MainTableViewHeader *header = [[NSBundle mainBundle]loadNibNamed:@"MainTableViewHeader" owner:nil options:nil].firstObject;
 
+    header.frame = CGRectMake(0, 0, [SWScreenHelper screenWidth], 58);
     UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
     UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
     effectView.frame = CGRectMake(0, 0, header.frame.size.width, header.frame.size.height);

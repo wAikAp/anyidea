@@ -10,9 +10,15 @@
 
 @implementation SWPortfolioCollectionViewCell
 
+-(void)setIs_protected:(BOOL)is_protected{
+    _is_protected = is_protected;
+    self.priveateBtn.hidden = !is_protected;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    self.jobImageView.layer.cornerRadius = 8;
+    self.jobImageView.layer.masksToBounds = YES;
 }
 
 @end

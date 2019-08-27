@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -54,10 +54,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="littleEye" translatesAutoresizingMaskIntoConstraints="NO" id="HMJ-mC-8Lk">
-                        <rect key="frame" x="67" y="219.5" width="20" height="12"/>
+                        <rect key="frame" x="67" y="215.5" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="7qx-dK-YDN"/>
-                            <constraint firstAttribute="height" constant="12" id="Q6x-58-fEd"/>
+                            <constraint firstAttribute="height" constant="20" id="Q6x-58-fEd"/>
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5o-oe-B0c" userLabel="line">
@@ -111,9 +111,9 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Like2" width="168" height="172"/>
+        <image name="Like2" width="512" height="512"/>
         <image name="alphaBackGround" width="376" height="399"/>
-        <image name="littleEye" width="10" height="6"/>
+        <image name="littleEye" width="512" height="512"/>
         <image name="thumb_5f3" width="690" height="510"/>
     </resources>
 </document>

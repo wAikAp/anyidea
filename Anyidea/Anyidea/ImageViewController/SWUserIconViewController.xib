@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SWUserIconViewController">
+            <connections>
+                <outlet property="iconImageView" destination="btU-of-Eej" id="vQ0-FA-ljP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cantina" translatesAutoresizingMaskIntoConstraints="NO" id="btU-of-Eej">
+                    <rect key="frame" x="0.0" y="40" width="375" height="607"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="YD9-eR-AhQ" appends="YES" id="YVo-FE-v7b"/>
+                    </connections>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="btU-of-Eej" secondAttribute="bottom" constant="20" id="5Jn-It-OyQ"/>
+                <constraint firstItem="btU-of-Eej" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="ppL-bR-oca"/>
+                <constraint firstItem="btU-of-Eej" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="vUT-Rv-4rp"/>
+                <constraint firstItem="btU-of-Eej" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="xWI-bz-bQx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+        <tapGestureRecognizer id="YD9-eR-AhQ">
+            <connections>
+                <action selector="iconViewDidClick:" destination="-1" id="gqG-1S-aM4"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="Cantina" width="1200" height="601"/>
+    </resources>
+</document>

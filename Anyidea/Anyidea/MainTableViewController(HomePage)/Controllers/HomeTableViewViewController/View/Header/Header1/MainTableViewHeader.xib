@@ -1,28 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue-Bold</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" restorationIdentifier="MainTableViewHeader" id="iN0-l3-epB" customClass="MainTableViewHeader">
-            <rect key="frame" x="0.0" y="0.0" width="450" height="58"/>
+            <rect key="frame" x="0.0" y="0.0" width="450" height="50"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEk-Uq-uF4">
-                    <rect key="frame" x="10" y="17.5" width="117" height="23"/>
+                    <rect key="frame" x="10" y="5" width="440" height="23"/>
                     <attributedString key="attributedText">
                         <fragment content="原創作品交易所">
                             <attributes>
@@ -41,20 +36,21 @@
                     </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="747" text="由創作人提供的創意圖檔，任何人都可以自由選購此區檔案" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbK-zx-gFs">
-                    <rect key="frame" x="142" y="15" width="298" height="29"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="747" text="由創作人提供的創意圖檔，任何人都可以自由選購此區檔案" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbK-zx-gFs">
+                    <rect key="frame" x="10" y="33" width="440" height="14.5"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="TEk-Uq-uF4" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="CMh-EK-5Fb"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WbK-zx-gFs" secondAttribute="trailing" constant="10" id="Iid-Id-kif"/>
+                <constraint firstItem="WbK-zx-gFs" firstAttribute="leading" secondItem="TEk-Uq-uF4" secondAttribute="leading" id="2KS-aR-Ku9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TEk-Uq-uF4" secondAttribute="trailing" id="4nK-wb-wdE"/>
                 <constraint firstItem="TEk-Uq-uF4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="LoU-m5-UDg"/>
-                <constraint firstItem="WbK-zx-gFs" firstAttribute="centerY" secondItem="TEk-Uq-uF4" secondAttribute="centerY" id="gMw-iJ-rZO"/>
-                <constraint firstItem="WbK-zx-gFs" firstAttribute="leading" secondItem="TEk-Uq-uF4" secondAttribute="trailing" constant="15" id="yIY-xh-TXk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WbK-zx-gFs" secondAttribute="trailing" id="W1G-dr-G6v"/>
+                <constraint firstItem="WbK-zx-gFs" firstAttribute="top" secondItem="TEk-Uq-uF4" secondAttribute="bottom" constant="5" id="Yty-bz-b7z"/>
+                <constraint firstItem="TEk-Uq-uF4" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="nQm-oP-G9U"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -62,7 +58,7 @@
                 <outlet property="BodyLable" destination="WbK-zx-gFs" id="mqM-94-JyQ"/>
                 <outlet property="TitleLabel" destination="TEk-Uq-uF4" id="0f7-ns-Lji"/>
             </connections>
-            <point key="canvasLocation" x="29" y="118"/>
+            <point key="canvasLocation" x="29" y="120"/>
         </view>
     </objects>
 </document>

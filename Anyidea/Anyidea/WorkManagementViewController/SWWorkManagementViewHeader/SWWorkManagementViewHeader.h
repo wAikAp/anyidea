@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SWWorkManagementViewHeader : UIView
+@property (weak, nonatomic) IBOutlet UILabel *startLabel;
 
 +(instancetype)workManagementViewHeader;
 

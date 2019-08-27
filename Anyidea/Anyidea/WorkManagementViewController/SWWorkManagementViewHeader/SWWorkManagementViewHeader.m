@@ -21,7 +21,7 @@
 +(instancetype)workManagementViewHeader
 {
     SWWorkManagementViewHeader *header = [[UINib nibWithNibName:NSStringFromClass(self.class) bundle:nil] instantiateWithOwner:nil options:nil][0];
-    
+    header.autoresizingMask = UIViewAutoresizingNone;
     return header;
 }
 

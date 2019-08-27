@@ -13,6 +13,7 @@
 #import "SWPostMissionViewController.h"
 #import "IQKeyboardManager.h"
 #import "SWPostMissionViewController.h"
+#import "SVProgressHUD.h"
 
 @interface AppDelegate ()
 
@@ -22,7 +23,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+
     UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
    
     UITabBarController *centerVC = [storyBoard instantiateViewControllerWithIdentifier:@"MainTabBarVC"];
@@ -31,20 +32,21 @@
     [centerVC addChildViewController:[[UINavigationController alloc]initWithRootViewController:postMissionVc]];
     postMissionVc.tabBarItem.title = @"發佈任務";
     postMissionVc.tabBarItem.image = [UIImage imageNamed:@"PostItem"];
-    centerVC.selectedIndex = 1;
+    centerVC.selectedIndex = 0;
     
     UIViewController *aboutMeVc = [storyBoard instantiateViewControllerWithIdentifier:@"MainLeftVC"];
     
-    UIViewController *menuVc = [storyBoard instantiateViewControllerWithIdentifier:@"MainRightVC"];
     
-    MMDrawerController *drawerController = [[MMDrawerController alloc]initWithCenterViewController:centerVC leftDrawerViewController:aboutMeVc rightDrawerViewController:menuVc];
     
+//    UIViewController *menuVc = [storyBoard instantiateViewControllerWithIdentifier:@"MainRightVC"];
+    //    MMDrawerController *drawerController = [[MMDrawerController alloc]initWithCenterViewController:centerVC leftDrawerViewController:aboutMeVc rightDrawerViewController:menuVc];
+    MMDrawerController *drawerController = [[MMDrawerController alloc]initWithCenterViewController:centerVC leftDrawerViewController:aboutMeVc];
     
     [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
     [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
     [drawerController setShowsShadow:YES];
-    [drawerController setMaximumRightDrawerWidth:[UIScreen mainScreen].bounds.size.width *2.3/5];
     [drawerController setMaximumLeftDrawerWidth:[UIScreen mainScreen].bounds.size.width *2/3 ];
+//    [drawerController setMaximumRightDrawerWidth:[UIScreen mainScreen].bounds.size.width *2.3/5];
     drawerController.shadowRadius = 1;
     drawerController.shadowOpacity = 1;
     /*
@@ -63,10 +65,16 @@
     UIWindow *window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window = window;
     window.rootViewController = drawerController;
+//    dispatch_async(dispatch_get_main_queue(), ^{
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleLight];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD setMaximumDismissTimeInterval:40.f];
     [window makeKeyAndVisible];
-    
     [IQKeyboardManager sharedManager].enable = YES;
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
+//    });
+    
+
     
     return YES;
 }

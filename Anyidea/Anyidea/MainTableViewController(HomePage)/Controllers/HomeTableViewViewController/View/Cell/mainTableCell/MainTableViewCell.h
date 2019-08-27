@@ -11,7 +11,9 @@
 @interface MainTableViewCell : UITableViewCell
 @property(nonatomic,strong)UIImage *photoImage;
 @property (weak, nonatomic) IBOutlet UILabel *workTitle;
-
+@property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
+@property (weak, nonatomic) IBOutlet UILabel *typeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 
 
 

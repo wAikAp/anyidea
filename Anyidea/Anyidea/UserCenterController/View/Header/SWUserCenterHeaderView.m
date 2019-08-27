@@ -7,6 +7,7 @@
 //
 
 #import "SWUserCenterHeaderView.h"
+#import "SWScreenHelper.h"
 
 @interface SWUserCenterHeaderView ()
 
@@ -22,6 +23,12 @@
     header.IntroductionBtn.titleLabel.numberOfLines = 0;
     return header;
 }
+
+-(void)awakeFromNib{
+    [super awakeFromNib];
+    [SWScreenHelper viewToCircleView:self.iconBtn];
+}
+
 - (IBAction)iconBtnDidClick:(UIButton *)sender {
     if ([self.delegate respondsToSelector:@selector(userCenterHeader:iconBtnDidClick:)]) {
         [self.delegate userCenterHeader:self iconBtnDidClick:sender];
@@ -36,6 +43,11 @@
 - (IBAction)submitedJobsBtnDidClick:(UIButton *)sender {
     if ([self.delegate respondsToSelector:@selector(userCenterHeader:submitedJobsBtnDidClick:)]) {
         [self.delegate userCenterHeader:self submitedJobsBtnDidClick:sender];
+    }
+}
+- (IBAction)logoutBtnDidClick:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(userCenterHeader:logoutBtnDidClick:)]) {
+        [self.delegate userCenterHeader:self logoutBtnDidClick:sender];
     }
 }
 

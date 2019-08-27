@@ -11,9 +11,7 @@
 #import "SWScreenHelper.h"
 
 @interface MainTableViewCell ()
-@property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
-@property (weak, nonatomic) IBOutlet UILabel *typeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+
 
 
 @end

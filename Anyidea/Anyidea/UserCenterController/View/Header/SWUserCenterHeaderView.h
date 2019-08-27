@@ -16,6 +16,8 @@
 -(void)userCenterHeader:(SWUserCenterHeaderView *)header iconBtnDidClick:(UIButton *)iconBtn;
 //已提交作品按鈕事件
 -(void)userCenterHeader:(SWUserCenterHeaderView *)header submitedJobsBtnDidClick:(UIButton *)btn;
+//logout
+-(void)userCenterHeader:(SWUserCenterHeaderView *)header logoutBtnDidClick:(UIButton *)btn;
 @end
 
 
@@ -34,6 +36,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *bombBtn;
 //修改簡介btn
 @property (weak, nonatomic) IBOutlet UIButton *IntroductionBtn;
+@property (weak, nonatomic) IBOutlet UIButton *logoutBtnImage;
+@property (weak, nonatomic) IBOutlet UIButton *logoutBtnText;
 @property (nonatomic, weak) id<SWUserCenterHeaderViewDelegate> delegate;
 
 +(instancetype)userCenterHeaderView;

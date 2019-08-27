@@ -6,10 +6,13 @@
 //  Copyright © 2018年 shingwai chan. All rights reserved.
 //
 
+
+#import "SWScreenHelper.h"
+#import "UIView+Extension.h"
+
 #import "SWWorkManagementViewController.h"
 #import "SWWorkManagementCollectionViewCell.h"
 #import "SWWorkManagementHeaderCollectionReusableView.h"
-#import "SWScreenHelper.h"
 #import "SWMissionWorkDetailCollectionViewController.h"
 #import "SWWorkManagementViewHeader.h"
 
@@ -45,15 +48,19 @@ static NSString *const headerID = @"SWWorkManagementHeaderCollectionReusableView
     self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
     
     
-    //header
+    //section header
     [self.collectionView registerNib:[UINib nibWithNibName:headerID bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerID];
     self.flowLayout.headerReferenceSize = CGSizeMake(self.view.frame.size.width, 44);
     self.flowLayout.sectionHeadersPinToVisibleBounds = YES;
     
+    //headerview
     SWWorkManagementViewHeader *header = [SWWorkManagementViewHeader workManagementViewHeader];
-    CGFloat headerHeight = 90.f;
-    header.frame = CGRectMake(0, 0, self.view.frame.size.width, headerHeight);
+    CGFloat headerHeight = 100;
+    
+    header.frame = CGRectMake(0, getRectNavAndStatusHight, WINDOW_WIDTH, headerHeight);
     [self.view addSubview:header];
+    
+    NSLog(@"haed = %f",getRectNavAndStatusHight);
     self.collectionView.contentInset = UIEdgeInsetsMake(header.frame.size.height, 0, 0, 0);
 }
 
@@ -98,11 +105,10 @@ static NSString *const headerID = @"SWWorkManagementHeaderCollectionReusableView
         
         if (indexPath.section == 0) {
             header.title.text = [NSString stringWithFormat:@"已上傳作品⏰ - %ld",self.imageArr.count];
-            header.effectView.backgroundColor = [UIColor blueColor];
+
         }else if (indexPath.section == 1){
             header.title.text = [NSString stringWithFormat:@"中標作品💰 - %ld",self.imageArr.count];
         }
-        
         
         return header;
     }

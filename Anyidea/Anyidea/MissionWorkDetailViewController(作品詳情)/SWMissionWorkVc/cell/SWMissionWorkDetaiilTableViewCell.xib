@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="SWMissionWorkDetaiilTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="739" id="KGk-i7-Jjw" customClass="SWMissionWorkDetaiilTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="619" height="739"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="619" height="738.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zcy-c8-71x">
+                        <rect key="frame" x="0.0" y="10" width="619" height="718.5"/>
+                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                    </imageView>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhC-O8-1bv">
+                        <rect key="frame" x="258" y="319" width="103" height="101"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="103" id="Cfa-6R-CLA"/>
+                            <constraint firstAttribute="height" constant="101" id="F2F-3Q-2tC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal" title="保密   " backgroundImage="private_image">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="zcy-c8-71x" secondAttribute="trailing" id="FUl-Ri-rSr"/>
+                    <constraint firstItem="GhC-O8-1bv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="FvS-jM-u45"/>
+                    <constraint firstItem="zcy-c8-71x" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Vej-dQ-Bto"/>
+                    <constraint firstItem="GhC-O8-1bv" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="nO3-iP-VWV"/>
+                    <constraint firstItem="zcy-c8-71x" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="pbC-oV-scF"/>
+                    <constraint firstAttribute="bottom" secondItem="zcy-c8-71x" secondAttribute="bottom" constant="10" id="rn3-7m-sFF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="privateBtn" destination="GhC-O8-1bv" id="1Zo-Sv-HaZ"/>
+                <outlet property="workImage" destination="zcy-c8-71x" id="bbL-Ca-TCR"/>
+            </connections>
+            <point key="canvasLocation" x="104.8" y="282.00899550224892"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="private_image" width="400.69564819335938" height="400.69564819335938"/>
+    </resources>
+</document>
